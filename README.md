@@ -1,8 +1,13 @@
 # Bounding Boxes, a case study in accidental complexity?
 
+## Abstract
+Bounding boxes are more complicated than they might seem - we should create a [reference guide](https://github.com/perrygeo/bbox-cheatsheet/blob/master/reference.md)
+to the various implementations to reduce a potential source of error and confusion.
+
+## Intro
 The humble bounding box. On the surface there's not much to it; a square defined by four bounding coordinates (west, south, east, north). This bounding box is a core construct in map rendering, spatial indexes and many spatial analysis techniques.
 
-<img src="images/bbox.png">
+<img src="bbox.png">
 
 Very simple and useful. Here's one way I can represent that as a data structure, also simple.
 
@@ -70,7 +75,7 @@ This tends to take some mental effort to keep straight, again mostly when moving
 The biggest source of potential bugs when working with bounding boxes is the coordinate ordering. Take a look at this bounding box and *quickly* tell me, which coordinate is `north`?
 
 ```bash
-Extent: (-20037508.342789, -12294969.949537) - (19975801.618313, 18921895.237730)
+Extent: (-20037508.34, -12294969.94) - (19975801.61, 18921895.23)
 ```
 
 It takes a few seconds to think about, doesn't it? And it requires knowledge of common conventions in your toolkit. In this case, this is the extent of a shapefile as reported by `ogrinfo`. I know that it reports in the following order:
