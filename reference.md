@@ -2,7 +2,7 @@
 
 The reference guide will allow you to quickly compare bounding boxes representation between software implementations and hopefully reduce a common source of bugs.
 
-See the [README](https://github.com/perrygeo/bbox-cheatsheet/README.md) for a detailed discussion of the rationale.
+See the [README](https://github.com/perrygeo/bbox-cheatsheet/blob/master/README.md) for a detailed discussion of the rationale.
 
 The rules are simple though somewhat arbitrary. But for the sake of normalizing
 the bounding box representation, we'll use the following notation:
@@ -33,10 +33,10 @@ Each software implementation listed here must have:
 
 -----------------------------------------------------------
 
-software |      terminology|    example| notes
----------|-----------------|------------------|-------
-postgis  |        extent   | `BOX(MINX MINY, MAXX MAXY)`
-gdalinfo output|corner coordinates|`Lower Left ( west, south) ... Upper Right (north)`
+software |   terminology   |    example
+---------|-----------------|------------------
+postgis  |        extent   | ```BOX(west south, east north)```
+gdalinfo output|corner coordinates|`Lower Left ( west, south )` `Upper Right ( east, north )`
 gdal_translate input|projwin ulx uly lrx lry|`-projwin west north east south`
 gdalwarp input|georeferenced extents, xmin ymin xmax ymax|`-te west south east north`
 ogrinfo output|Extent|`Extent: (west, south) - (east, north)`
