@@ -91,6 +91,8 @@ fundamentally the same concept. Ideally there would be some common representatio
 In an attempt to build a comprehensive reference guide to bounding box implementations
 in GIS software, head on over to in the <a href="reference.md">Bounding Box Cheatsheet</a>
 
+No doubt you could probably build an abstraction layer for bounding coordinates in
+your programming environment of choice. This project stops short of a software implementation but hopefully provides good supporting data should anyone want to write one.
 
 ## Contributing
 
