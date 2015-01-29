@@ -42,6 +42,7 @@ gdalwarp input|georeferenced extents, xmin ymin xmax ymax|`-te west south east n
 ogrinfo output|Extent|`Extent: (west, south) - (east, north)`
 ogr2ogr/ogrinfo input|-spat xmin ymin xmax ymax|`-spat
 GeoTools|Envelope/BoundingBox|
+mapnik|extent/envelope|Box2d(minx,miny,maxx,maxy)
 qgis|
 arcgis|
 elasticsearch|
