@@ -8,13 +8,14 @@ See the [README](https://github.com/perrygeo/bbox-cheatsheet/blob/master/README.
 
 software | terminology     |  example representation   |   normalized representation
 ---------|-----------------|---------------------------|-----------------------------
-postgis  |        extent   | ```BOX(west south, east north)```
-gdalinfo output|corner coordinates|`Lower Left (llx lly) (longitude latitude)`|`Lower Left ( west, south )`    / `Upper Right ( east, north )`
+postgis  |        extent   ||  `BOX(west south, east north)`
+gdalinfo output|corner coordinates||`Lower Left ( west, south )` `Upper Right ( east, north )`
 gdal_translate input|Subwindow, geographic coordinates|projwin ulx uly lrx lry|`-projwin west north east south`
 gdalwarp input|georeferenced extents|`-te xmin ymin xmax ymax`|`-te west south east north`
 ogrinfo output|Extent||`Extent: (west, south) - (east, north)`
-ogr2ogr and ogrinfo input|`-spat xmin ymin xmax ymax`|`-spat west south east north`
+ogr2ogr and ogrinfo input||`-spat xmin ymin xmax ymax`|`-spat west south east north`
 mapnik|extent, envelope|`Box2d(minx,miny,maxx,maxy)`|`Box2d(west,south,east,north)`
+qgis (dekstop interface)|extent||`west,south : east,north`
 
 ## Contributing
 
@@ -38,7 +39,7 @@ the *normalized notation* would be
 (west, south, east, north)
 ```
 
-Each software implementation listed here must have:
+Each software implementation listed here should have:
 
 1. Name of software
 2. Vocabulary
