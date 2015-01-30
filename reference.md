@@ -10,12 +10,19 @@ software | terminology     |  example representation   |   normalized representa
 ---------|-----------------|---------------------------|-----------------------------
 postgis  |        extent   ||  `BOX(west south, east north)`
 gdalinfo output|corner coordinates||`Lower Left ( west, south )` `Upper Right ( east, north )`
-gdal_translate input|Subwindow, geographic coordinates|projwin ulx uly lrx lry|`-projwin west north east south`
+gdal_translate input|Subwindow, geographic coordinates|`-projwin ulx uly lrx lry`|`-projwin west north east south`
 gdalwarp input|georeferenced extents|`-te xmin ymin xmax ymax`|`-te west south east north`
 ogrinfo output|Extent||`Extent: (west, south) - (east, north)`
 ogr2ogr and ogrinfo input||`-spat xmin ymin xmax ymax`|`-spat west south east north`
 mapnik|extent, envelope|`Box2d(minx,miny,maxx,maxy)`|`Box2d(west,south,east,north)`
-qgis (dekstop interface)|extent||`west,south : east,north`
+qgis (dekstop interface)|Extent||`west,south : east,north`
+shapely|bounding box,bounds|`(minx, miny, maxx, maxy)`|`(west, south, east, north)`
+fiona|bounding box,bounds,mbr|`(minx, miny, maxx, maxy)`|`(west, south, east, north)`
+rio (rasterio cli)|bounds|GeoJSON FeatureCollection|
+grass|region, extent, bounding box|`n, s, w, e`|`north, south, west, east`
+saga|extent, bbox|`xMin, yMin, xMax, yMax`|`west, south, east, north`
+
+
 
 ## Contributing
 
