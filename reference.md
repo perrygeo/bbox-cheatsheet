@@ -23,7 +23,8 @@ rio (rasterio cli)|bounds|GeoJSON FeatureCollection|
 grass|region, extent, bounding box|`n, s, w, e`|`north, south, west, east`
 saga|extent, bbox|`xMin, yMin, xMax, yMax`|`west, south, east, north`
 elasticsearch|Bounding box|`"top_left" : {"lat" : 40.73, "lon" : -74.1 }, "bottom_right" : {"lat" : 40.01, "lon" : -71.12 }`|`"top_left" : {"lat" : north, "lon" : west }, "bottom_right" : {"lat" : south, "lon" : east }`
-
+mapserver|extent|EXTENT minx miny maxx maxy|`EXTENT west south east north`
+mapcache|extent|`<extent>-180 -90 180 90</extent>`|`west south east north`
 
 
 
